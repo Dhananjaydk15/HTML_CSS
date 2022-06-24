@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 35%;
+        margin-left: 34%;
+        background-color:whitesmoke;
+        border-radius: 40px;
+        margin-bottom: 50px;
+    }
+    .ele {
+        padding: 20px 20px 20px 20px;
+    }
+
+    .in{
+        background-color: inherit;
+        border: none;
+        border-bottom: 2px solid;
+        text-decoration:  underline;
+        color: black;
+        text-decoration: none;
+    }
+    .container h3{
+        padding-left: 20px;
+    }
+
+    .sub {
+        background-color: whitesmoke;
+        border-radius: 5px;
+        border-color: gray;
+    }
+    .sub:hover{
+        background-color: gray;
+        border-color: whitesmoke;
+    }
+    body {
+        background: url(img/res2.jpg);
+        background-size: contain;
+    }
+    .h {
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 10%;
+        margin-right: 70%;
+        color: blueviolet;
+    }
+    .head img{
+        display: inline-block;
+        float: left;
+    }
+</style>
+<body>
+<div class="head">
+    <img src="img/logo.png" height="100px" width="100px" alt="">
+    <h1 class="h">Create Resume</h1>
+</div>
+    <div class="container">
+        <h3 >Fill The Following Info :</h3>
+        <form action="resume.php">
+            <div class="ele">
+                Objective: <br> <center><textarea rows="5" cols="25"></textarea required></center>
+            </div>
+            
+            <div class="ele">
+                Name : <input class="in" type="text" name="Name" placeholder="Enter Name" required>
+            </div>
+            
+            <div class="ele">
+                Email : <input class="in" type="email" name="Email" id="" required>
+            </div>
+            
+            <div class="ele">
+                Address : <br><center><textarea rows="5" cols="25" required></textarea></center>
+            </div>
+            
+            <div class="ele">
+                Mobile No. : <input class="in" type="number" name="Mobile-No" required>
+            </div> 
+            <div class="ele">
+                Date fo Birth : <input class="in" type="date" name="ddate" required>
+            </div>
+            <p class="ele">Select Qualification:
+                <input class="in" type="search" list="education" placeholder="Select" required>
+                <datalist id="education">
+                    <option>10th</option>
+                    <option>12th</option>
+                    <option>BTech</option>
+                    <option>BSC</option>
+                    <option>Mtech</option>
+                    <option>Other <input type="text" name="" id=""></option>
+                </datalist>
+            </p>
+            <div class="ele">
+                Skills :
+                <input type="checkbox" > c++
+                <input type="checkbox"> java
+                <input type="checkbox"> html
+                <input type="checkbox"> css
+            </div>
+            
+            <div class="ele" required>
+                experience :
+                <input type="radio" name="exp"> fresher
+                <input type="radio" name="exp"> >2 year
+                <input type="radio" name="exp"> >5 year
+                <input type="radio" name="exp"> >10 year
+            </div>
+            
+            <div class="ele">
+                PAN ID : <input class="in" type="password" name="PAN ID" required>
+            </div> 
+            <div class="ele">
+                Upload Image : 
+                <input type="file" name="image" id="" required> 
+            </div>
+            
+            <div class="ele" class="sub">
+                <input class="sub" type="submit" name="submit" id=""> <input  class="sub" type="Reset" name="Reset" id="">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
